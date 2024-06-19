@@ -1,0 +1,29 @@
+
+{"canisters": {
+    "rag_backend": {
+      "candid": "rag_backend/rag_backend.did",
+      "package": "rag_backend",
+      "type": "rust"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "networks": {
+    "production": {
+      "providers": ["https://icp0.io"],
+      "type": "persistent"
+    },
+    "staging": {
+      "providers": ["https://icp0.io"],
+      "type": "persistent"
+    }
+  },
+
+  "output_env_file": ".env",
+  "version": 1
+
+}

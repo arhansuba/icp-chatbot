@@ -1,0 +1,41 @@
+import { Identity, SignIdentity } from '@dfinity/agent';
+import { DelegationChain, DelegationIdentity } from '@dfinity/identity';
+import { AuthClientCreateOptions, AuthClientLoginOptions, InternetIdentityAuthRequest } from '../types';
+import { Wallet } from '@astrox/sdk-core';
+import { AbstractedClientStorage } from '@astrox/sdk-core';
+export declare class AuthClient {
+    private _identity;
+    private _key;
+    private _chain;
+    private _storage;
+    private _wallet?;
+    private _appId?;
+    private _delegationIdentity?;
+    private _delegationTargets;
+    private _lastRequest?;
+    private _confirm?;
+    private _idpWindowOption?;
+    private _idpWindow?;
+    private _eventHandler?;
+    static create(options?: AuthClientCreateOptions): Promise<AuthClient>;
+    protected constructor(_identity: Identity, _key: SignIdentity | null, _chain: DelegationChain | null, _storage: AbstractedClientStorage, _wallet?: any, _appId?: string | undefined, _delegationIdentity?: DelegationIdentity | undefined, _delegationTargets?: string[], _lastRequest?: InternetIdentityAuthRequest | undefined, _confirm?: boolean | undefined, _idpWindowOption?: string | undefined, _idpWindow?: Window | undefined, _eventHandler?: ((event: MessageEvent) => void) | undefined);
+    private _handleSuccess;
+    getIdentity(): Identity;
+    getLastRequest(): InternetIdentityAuthRequest | undefined;
+    getDelegationIdentity(): DelegationIdentity | undefined;
+    getInnerKey(): SignIdentity | null;
+    getDelegationChain(): DelegationChain | null;
+    get wallet(): Wallet;
+    getConfirm(): boolean | undefined;
+    setWallet(data: Wallet): void;
+    getDelegateTargets(): string[];
+    setDelegationTargets(targets: string[]): void;
+    isAuthenticated(): Promise<boolean>;
+    login(options?: AuthClientLoginOptions): Promise<void>;
+    private _getEventHandler;
+    private _handleFailure;
+    private _removeEventListener;
+    logout(options?: {
+        returnTo?: string;
+    }): Promise<void>;
+}

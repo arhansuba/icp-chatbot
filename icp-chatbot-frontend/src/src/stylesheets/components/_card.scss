@@ -1,0 +1,195 @@
+.contact-card.elna-card {
+  // box-shadow: 0 10px 28px -7px rgba(153, 161, 170, 0.15);
+  // border-color: transparent;
+  background-color: var(--background-elevated-base);
+  border: 1px solid var(--background-base-border);
+}
+
+.card .card-body {
+  padding: 1.25rem;
+  min-height: 1px;
+}
+
+.card .card-body .card-body-menu {
+  width: min-content;
+  margin-left: auto;
+  z-index: 10;
+}
+
+.card-body .card-body-menu .card-dropdown-delete {
+  color: var(--el-bg-danger);
+}
+.card .card-body .card-body-menu-button {
+  &::after {
+    content: none;
+  }
+}
+
+.card-body__price {
+  color: var(--primary-success);
+  font-weight: 400;
+}
+
+.contact-card.elna-card .user-name,
+.contact-card.elna-card .user-name a {
+  font-weight: 700;
+  color: var(--title-sub-color);
+  text-decoration: none !important;
+  text-transform: capitalize;
+}
+
+.elna-card.agent-create {
+  background-color: var(--background-btn-secondary);
+  min-height: 140px;
+}
+
+.card {
+  margin-bottom: 0.875rem;
+  border-radius: 0.5rem;
+  max-width: 300px;
+}
+
+.card.contact-card.elna-card .card-footer {
+  justify-content: center;
+  width: 100%;
+  font-size: 13px;
+  color: var(--description-color-60);
+}
+
+.card.contact-card.elna-card .card-footer > a {
+  text-decoration: none;
+}
+
+.contact-card.elna-card .user-desg {
+  font-size: 13px;
+  color: var(--description-color-60);
+}
+
+.card .card-footer {
+  border-color: var(--background-base-border);
+}
+
+.card .card-footer {
+  // background-color: var(--el-color-popup-bg);
+}
+
+.contact-card.elna-card:hover {
+  box-shadow: 0 20px 48px -14px rgb(4 4 4 / 67%);
+  background-color: var(--el-color-popup-bg);
+  border: var(--background-base-border);
+}
+
+.contact-card.elna-card svg {
+  transform: scale(1);
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+
+.contact-card.elna-card:hover svg {
+  transform: scale(1.25);
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+
+.contact-card.elna-card img {
+  transform: scale(1);
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+
+.contact-card.elna-card:hover img {
+  transform: scale(0.85);
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+
+/*Avatar*/
+.avatar {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  background-color: transparent;
+}
+
+.avatar.avatar-xl {
+  width: 7rem;
+  height: 7rem;
+}
+
+/*Avatar Intial*/
+
+.avatar.avatar-soft-primary > .initial-wrap {
+  background-color: #ebf5f5 !important;
+  color: #007d88;
+}
+
+.avatar.avatar-xl > .initial-wrap {
+  font-size: 1.75rem;
+}
+
+.avatar.avatar-rounded .avatar-img,
+.avatar.avatar-rounded .initial-wrap {
+  border-radius: 50%;
+}
+
+.avatar > .initial-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  justify-content: center;
+  -webkit-justify-content: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.avatar .avatar-img,
+.avatar .initial-wrap {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5rem;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+/*Create Agent*/
+.position-bottom-end-overflow {
+  bottom: 0 !important;
+  right: 0 !important;
+  top: auto !important;
+  -webkit-transform: translate(50%, 50%) !important;
+  -moz-transform: translate(50%, 50%) !important;
+  -ms-transform: translate(50%, 50%) !important;
+  -o-transform: translate(50%, 50%) !important;
+  transform: translate(50%, 50%) !important;
+}
+
+.card-img-overlay.coming-soon h5 {
+  display: none;
+}
+
+.contact-card.elna-card:hover .card-img-overlay.coming-soon {
+  border: 1px solid var(--background-base-border);
+}
+
+.card-img-overlay.coming-soon:hover {
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  color: #fff;
+  z-index: 5;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 8px;
+  // border-color: var(--background-base-border);
+}
+
+.card-img-overlay.coming-soon:hover h5 {
+  display: block;
+}

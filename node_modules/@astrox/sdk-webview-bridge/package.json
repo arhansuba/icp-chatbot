@@ -1,0 +1,30 @@
+{
+  "name": "@astrox/sdk-webview-bridge",
+  "version": "0.1.41",
+  "main": "build/index.js",
+  "module": "build/index.js",
+  "types": "build/index.d.ts",
+  "author": "AstroX <dev@astrox.network>",
+  "license": "(Apache-2.0 AND MIT)",
+  "private": false,
+  "homepage": "https://github.com/AstroxNetwork",
+  "keywords": [],
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@types/jest": "^29.0.0",
+    "borc": "^2.1.1",
+    "jest": "^29.0.2",
+    "simple-cbor": "^0.4.1"
+  },
+  "devDependencies": {
+    "eslint-config-custom": "0.0.0",
+    "tsconfig": "0.0.0"
+  },
+  "scripts": {
+    "build": "pnpm run clean && tsc --emitDeclarationOnly && swc src -d build && rm -rf tsconfig.tsbuildinfo",
+    "build:tsc": "pnpm run clean && tsc && rm -rf tsconfig.tsbuildinfo",
+    "clean": "rm -rf tsconfig.tsbuildinfo && rm -rf build"
+  }
+}
