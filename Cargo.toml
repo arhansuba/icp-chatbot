@@ -1,5 +1,0 @@
-[workspace]
-members = [
-    "src/icp-chatbot-backend"
-]
-resolver = "2"

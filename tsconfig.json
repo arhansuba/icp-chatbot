@@ -1,11 +1,36 @@
 {
-    "compilerOptions": {
-        "strict": true,
-        "target": "ES2020",
-        "experimentalDecorators": true,
-        "strictPropertyInitialization": false,
-        "moduleResolution": "node",
-        "allowJs": true,
-        "outDir": "HACK_BECAUSE_OF_ALLOW_JS"
+  "compilerOptions": {
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "allowJs": false,
+    "skipLibCheck": true,
+    "esModuleInterop": false,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "types": ["vite/client", "@testing-library/jest-dom","vite-plugin-svgr/client"],
+    "paths": {
+      "apis/*": ["./src/apis/*"],
+      "components/*": ["./src/components/*"],
+      "common/*": ["./src/common/*"],
+      "translations/*": ["./src/translations/*"],
+      "stylesheets/*": ["./src/stylesheets/*"],
+      "elna-ui/*": ["./src/components/elna-ui/*"],
+      "hooks/*": ["./src/hooks/*"],
+      "images/*": ["./src/images"],
+      "stores/*": ["./src/stores/*"],
+      "types": ["./src/types.ts"],
+      "declarations/*": ["./src/declarations/*"],
+      "utils/*":["./src/utils/*"],
+      "src/*": ["./src/*"]
     }
+  },
+  "include": ["src"]
 }
