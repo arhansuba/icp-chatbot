@@ -3,7 +3,7 @@
     "icp-chatbot-backend": {
       "candid": "src/icp-chatbot-backend/icp-chatbot-backend.did",
       "package": "icp-chatbot-backend",
-      "type": "rust"
+      "type": "motoko"
     },
     "icp-chatbot-frontend": {
       "dependencies": [

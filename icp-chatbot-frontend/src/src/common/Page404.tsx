@@ -5,7 +5,7 @@ import Image404 from "../images/404-error.png";
 function Page404() {
   const { t } = useTranslation();
   return (
-    <div className="error-elna">
+    <div className="error">
       <div className="error-content">
         <img src={Image404} />
         <p>{t("404Page.problem")}</p>
